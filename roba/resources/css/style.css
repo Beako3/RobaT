@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #fff;
+    font-family: 'Lato',Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/* 
+Reusable Components
+*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.myRow{
+    display: flex; 
+    justify-content: space-between;
+}
+
+/* heading */
+
+h1, h2, h3{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1{
+    margin: 0;
+    font-size: 160%;
+    color: #fff;
+    word-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2::after{
+    display: block;
+    content: "";
+    height: 2px;
+    background-color:rgb(13, 105, 105);
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/* Button */
+
+.btn:link, 
+.btn:visited,
+input[type="submit"]{
+    display: inline-block;
+    border-radius: 200px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"]{
+    border: 1px solid aqua;
+    margin-right: 15px;
+}
+
+.btn-full:active,
+.btn-full:hover,
+input[type="submit"]{
+    background-color: aqua;
+    border: 1px solid aqua;
+    color: black;
+    font-weight: 400;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 1px solid aqua;
+    color: white;
+}
+
+.btn-ghost:active,
+.btn-ghost:hover{
+    background-color: aqua;
+    color: black;
+    font-weight: 400;
+}
+
+/* section */
+section {
+    padding: 45px 0;
+}
+
+
+
+/*******************
+    Header
+*******************/
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/scania.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text-box{
+    width: 1140px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    margin: 5px 0;
+}
+
+.main-nav{
+    margin-top: 55px; 
+    display: flex;  
+    list-style: none;
+    gap: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding-bottom: 8px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    transition: border-bottom 0.4s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid aqua;
+}
+
+/* Mobile Nav */
+
+.mobile-nav-icon{
+    display: none;
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.mobile-nav-icon-btn{
+    font-size: 200%;
+    color: #fff;
+}
+
+/* Stick nav */
+
+.stick{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+    box-shadow: 0 2px 2px #efefef;
+}
+
+.stick .main-nav {
+    margin-top: 18px;
+}
+
+.stick .main-nav li a:link,
+.stick .main-nav li a:visited{
+    padding: 15px 0;
+    color: #555;
+}
+
+
+.stick .logo { display: none; }
+.stick .logo-black { display: block; }
+
+/*******************
+    Features
+*******************/
+
+.btn-app{
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.btn-app img {
+    width: auto;
+    height: 40px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+               
+/*******************
+    Form
+*******************/
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}   
+
+input[type="text"],
+input[type="email"],
+select,
+textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea{
+    height: 100px;
+}
+
+input[type="checkbox"]{
+    margin: 10px 5px 10px 0;
+}
+
+*:focus{
+    outline: none;
+}
+
+
+
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.js--wp-1,
+.js--wp-2{
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js--wp-3{
+    animation-duration: 1s;
+}
+
+.js--wp-1 .animate__animated,
+.js--wp-2 .animate__animated {
+    opacity: 1;
+    animation-duration: 1s;
+}
